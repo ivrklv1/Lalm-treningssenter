@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lalm Treningssenter</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="logo">Lalm Treningssenter</div>
+      <nav>
+        <a href="#innmelding">Bli medlem</a>
+        <a href="/contract.html">Kontrakt</a>
+        <a href="/privacy.html">Personvern</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Tren når det passer – midt i Lalm</h1>
+      <p>Moderne styrkerom med enkel innmelding, digital kontrakt og sikker betaling.</p>
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="grid">
+      <div class="span6">
+        <div class="card" id="innmelding">
+          <h2>Medlemskap</h2>
+          <p><span class="badge">Anbefalt</span> Månedsmedlemskap: <strong>249,-/mnd</strong>.<br/>Hyttemedlemskap (12 mnd): <strong>1&nbsp;999,-/år</strong>.</p>
+          <hr/>
+          <form id="signupForm">
+            <label>Fullt navn
+              <input type="text" name="name" placeholder="Ola Nordmann" required />
+            </label>
+            <label>E-post
+              <input type="email" name="email" placeholder="ola@nordmann.no" required />
+            </label>
+            <label>Telefon
+              <input type="tel" name="phone" placeholder="+47 9x xx xx xx" />
+            </label>
+            <label>Adresse (valgfritt)
+              <input type="text" name="address" placeholder="Gate, postnr og sted" />
+            </label>
+            <label>Velg produkt
+              <select name="plan" required>
+                <option value="monthly">Månedsmedlemskap (249,-/mnd)</option>
+                <option value="yearly">Hyttemedlemskap 12 mnd (1 999,-/år)</option>
+              </select>
+            </label>
+            <label style="display:flex; gap:8px; align-items:flex-start;">
+              <input type="checkbox" name="consent" required />
+              <span>Jeg har lest og godtar <a href="/contract.html" target="_blank">kontrakten/brukarvilkåra</a> og <a href="/privacy.html" target="_blank">personvernerklæringa</a>.</span>
+            </label>
+            <button class="primary" type="submit">Gå til betaling</button>
+            <p id="msg" class="small"></p>
+          </form>
+        </div>
+      </div>
+      <div class="span6">
+        <div class="card">
+          <h2>Om senteret</h2>
+          <p>Selvbetjent adgang med QR/app og kameraovervåking for trygg og ryddig drift. Aldersgrense 18 år. 15–17 år i følge med føresette – begge må ha aktivt medlemskap.</p>
+          <p>Brudd på reglar fører til utestenging utan varsel og utan rett på refusjon.</p>
+          <p><a href="/terms.html">Husreglar og tryggleik</a></p>
+        </div>
+        <div class="card">
+          <h2>Kontakt</h2>
+          <p>E-post: <a href="mailto:post@lalmil.no">post@lalmil.no</a><br/>Adresse: Lalm Idrettslag, 2682 Lalm</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="main small">
+      © <span id="year"></span> Lalm Idrettslag – Lalm Treningssenter
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

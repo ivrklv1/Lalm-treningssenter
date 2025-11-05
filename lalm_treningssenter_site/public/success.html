@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Velkomen som medlem!</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="main">
+  <div class="card">
+    <h1>Velkomen som medlem!</h1>
+    <p>Betalinga er fullført. Du får kvittering og info på e-post. Ta kontakt om du treng hjelp til tilgang.</p>
+    <p class="small">Du kan lagre denne sida. Ho vil vise statusen din:</p>
+    <pre id="statusBox" class="small"></pre>
+    <p><a href="/">Tilbake til framsida</a></p>
+  </div>
+  <script>
+    async function loadStatus(){
+      const params = new URLSearchParams(window.location.search);
+      const m = params.get('m');
+      if (!m) return;
+      const res = await fetch('/api/member/' + m);
+      const j = await res.json();
+      document.getElementById('statusBox').textContent = JSON.stringify(j, null, 2);
+    }
+    loadStatus();
+  </script>
+</body>
+</html>
